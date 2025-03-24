@@ -1,0 +1,112 @@
+:root {
+    --altoFiltro:175px;
+    --anchoFiltro:350px;
+
+    --ruido:url(https://arc.net//noise-light.png);
+
+    --fondo:#11140f;
+    --fondo2:#1c2219;
+    --contenedor:#1d211b;
+    --textoTitulos:#a7d293;
+    --botones:#3d4b36;
+    --botonBorde:#373a33;
+    --texto:#e1e4da;
+    --header:#1c221a;
+
+    --bacgoundLinks:#224e4f;
+    --textoLinks:#bcebed;
+
+}
+@font-face {
+    font-family: "Marlin Soft SQ EB";
+    src: url(../../webroot/fonts//MarlinSoftSQ-ExtraBold.woff2);
+}
+@font-face {
+    font-family: "Marlin Soft SQ M";
+    src: url(../../webroot/fonts//MarlinSoftSQ-Medium.woff2);
+}
+body{background-color: var(--fondo); color: var(--texto); font-family: "Marlin Soft SQ M"; margin: 0; padding: 0; max-width: 1920px; margin: 0 auto;}
+h1,h2,h3,h4,p{font-size: 1em; margin: 0;}
+a,main>section>div>div{text-decoration: none; color: var(--textoLinks);}
+header img{width: 100px;}
+
+header>div {display: flex; align-items: center; gap: 15px;}
+header,footer{background-color: var(--fondo2); width: 100%; display: flex; padding: 15px; box-sizing: border-box; align-items: center;}
+header{justify-content: space-between; margin-bottom: 25px;}
+header h1{font-family: "Marlin Soft SQ EB"; font-size: 1.75em; font-weight: bolder;}
+
+footer>div{display: flex; gap: 15px;}
+footer{flex-direction: column; gap: 10px; margin-top: 25px;}
+
+main{width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+
+}
+main>section {background-color: var(--contenedor); display: flex; margin: 50px; flex-direction: column; align-items: center}
+main>section>h2 {font-size: 1.5em; padding-top: 20px;}
+main>section>div{
+    display: flex;
+    /* grid-template-columns: repeat(5, 1fr); */
+    gap: 12px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 95%;
+}
+
+main>section>div>a,
+main>section>div>div {
+    flex-basis: calc(100% / 3 - 22px);
+    background-color: var(--botones);
+    border-radius: 7px;
+    transition: background-color 1s;
+}
+main>section>div>a>img,
+main>section>div>div>img {display: none;}
+main>section>div>a>p,
+main>section>div>div>p,
+main>section>div>div>a {width:max-content; margin: 0 auto; padding: 6px; user-select: none;}
+
+main>section>div>a>p:hover,
+main>section>div>div>a:hover {filter: brightness(75%);}
+
+main>section>div>a:hover,
+main>section>div>div:hover {
+    background-color: var(--bacgoundLinks);
+}
+
+
+
+
+.iconsito>a { width: fit-content; text-decoration: none; }
+a.iconsito { text-decoration: none; }
+
+.iconsito {
+    background-color: #2222226d;
+    display: flex; /* Asegura alineación para el contenido */
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Ajusta según tus necesidades */
+    height: 35px; /* Ajusta según tus necesidades */
+    border-radius: 30%; /* Opcional: hace que el contenedor sea circular */
+    transition: .9s;
+}
+.iconsito i {
+    display: flex;
+    width: 100%; /* Coincide con el tamaño del contenedor */
+    height: 100%; /* Coincide con el tamaño del contenedor */
+    font-size: 33px; /* Tamaño del ícono; ajusta según sea necesario */
+}
+.iconsito i::before {
+    width: 100%; 
+    height: 100%; 
+}
+.iconsito:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}

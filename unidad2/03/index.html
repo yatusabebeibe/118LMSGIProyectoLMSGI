@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ud2.03 Jesus Temprano Gallego</title>
+    <link rel="stylesheet" href="../../webroot/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../../webroot/media/favicon.ico">
+
+    <!-- Los elementos meta -->
+    <meta name="description" content="Formulario de gatos que esta loquisimo">
+    <meta name="keywords" content="gatos, formulario, HTML">
+    <meta name="author" content="Jesus Temprano Gallego">
+
+    <style>
+        img { object-fit: contain; max-width: 160px; max-height: 125px; }
+        .h img { height: 125px; }
+        .w img { width: auto; }
+        .flex > div:nth-child(2), .flex { display: flex; }
+        .centrarHorizontal { align-items: center; }
+        label > div > p { margin: 0; }
+
+        .w3v{margin: 0;}
+    </style>
+</head>
+<body>
+
+    <h1>Formulario Gatuno</h1>
+    
+    <form action="#" method="post">
+        
+        <!-- 1. Elemento de texto -->
+        <label for="nombre">Nombra a tu gato (entre 3 y 20 caracteres) *:</label>
+        <input type="text" id="nombre" name="nombre" minlength="4" maxlength="20" required size="25">
+        <br><br>
+        
+        <!-- 2. Elementos radio -->
+        <p>Que gato eres hoy?:</p>
+        <div class="flex h">
+            <div class="flex">
+                <input type="radio" id="aleman" name="queGatoEres" value="aleman">
+                <label for="aleman"><span>Aleman</span>
+                    <img src="./images/gatoAleman.webp" alt="Gato Aleman" class="flex"></label>
+            </div>
+            <div class="flex">
+                <input type="radio" id="elegante" name="queGatoEres" value="elegante">
+                <label for="elegante"><span>Boioioing</span>
+                    <img src="./images/gatoBoioioing.gif" alt="gato boioioing" class="flex"></label>
+            </div>
+            <div class="flex">
+                <input type="radio" id="shushi" name="queGatoEres" value="shushi">
+                <label for="shushi"><span>Shushi</span>
+                    <img src="./images/gatoShushi.gif" alt="gato bien chill siendo un royito de shushi" class="flex"></label>
+            </div>
+            <div class="flex w">
+                <input type="radio" id="abogado" name="queGatoEres" value="abogado">
+                <label for="abogado"><span>Graduado en derecho</span>
+                    <img src="./images/gatoAbogado.jpg" alt="gato graduado en derecho" class="flex"></label>
+            </div>
+        </div>
+        <br><br>
+        
+        <!-- 3. Elementos checkbox -->
+        <p>Que gato te llevarias a un atraco:</p>
+        <div class="flex h">
+            <div class="flex centrarHorizontal">
+                <input type="checkbox" id="gatoExplosivo" name="atraco" value="gatoExplosivo">
+                <label for="gatoExplosivo"><span>Gato Explosivo</span>
+                    <img src="./images/gatoExplosivo.gif" alt="gato que explota" class="flex"></label>
+            </div>
+            <div class="flex">
+                <input type="checkbox" id="gatoByN" name="atraco" value="gatoByN">
+                <label for="gatoByN"><span>Gato Black N White</span>
+                    <img src="./images/gatoBlackNWhite.gif" alt="gato en blanco y negro" class="flex"></label>
+            </div>
+            <div class="flex w">
+                <input type="checkbox" id="fachero" name="atraco" value="fachero">
+                <label for="fachero"><span>Gato fachero</span>
+                    <img src="./images/gatoFachero.gif" alt="gato con tremenda facha" class="flex"></label>
+            </div>
+            <div class="flex w">
+                <input type="checkbox" id="calcetin" name="atraco" value="calcetin">
+                <label for="calcetin"><span>Gato calcetin</span>
+                    <img src="./images/gatoCalcetin.gif" alt="gato embutido en un calcetin" class="flex"></label>
+            </div>
+        </div>
+        <br><br>        
+
+        <!-- 4. Elemento de correo -->
+        <div class="flex centrarHorizontal w">
+            <div>
+                <label for="email">Correo electrónico *:</label>
+                <input type="email" id="email" name="email" required maxlength="50" size="30">
+            </div>
+            <div>
+                <img src="./images/gatoCartero.jpg" alt="gato cartero">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 5. Elemento de telefono -->
+        <div class="flex centrarHorizontal h">
+            <div>
+                <label for="telefono">Teléfono de tu gatita (formato: 123-456-789):</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+            </div>
+            <div>
+                <img src="./images/gatoLlamada3.gif" alt="gato llamando a su gatita">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 6. Elemento date -->
+        <div class="flex centrarHorizontal h">
+            <div>
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fecha" min="1950-01-01" max="2024-12-31" value="2000-01-01">
+            </div>
+            <div>
+                <img src="./images/gatoCumpleaños2.gif" alt="gato celebrando su cumpleaños (esta secuestrado por la mafia)">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 7. Elemento time -->
+        <div class="flex centrarHorizontal h">
+            <div>
+                <label for="hora">Selecciona la hora de dormir (entre 18:00 y 08:00):</label>
+                <input type="time" id="hora" name="hora" min="18:00" max="08:00">
+            </div>
+            <div>
+                <img src="./images/gatoDurmiendo.gif" alt="gato durmiendo por estar cansado de tanto dormir">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 8. Elemento week -->
+        <div class="flex centrarHorizontal h">
+            <div>
+                <label for="semana">Selecciona una semana que te deje con esta cara:</label>
+                <input type="week" id="semana" name="semana">
+            </div>
+            <div>
+                <img src="./images/gatoSemana2.gif" alt="gato con una depresion al perder a sus 5 hijos por no pagar lo que le devia a la mafia a tiempo">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 9. Elemento month -->
+        <div class="flex centrarHorizontal h">
+            <div>
+                <label for="mes">Selecciona un mes te te haga estar asi:</label>
+                <input type="month" id="mes" name="mes">
+            </div>
+            <div>
+                <img src="./images/gatoSaltandoMes.gif" alt="gato saltando por matar a los 5 hijos del gato de arriba">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 10. Elemento range -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="rango">¿Que tanto te gusta el comunismo? (0-10):</label>
+                <input type="range" id="rango" name="rango" min="0" max="10">
+            </div>
+            <div>
+                <img src="./images/gatoComunismo.webp" alt="gato de la URSS">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 11. Elemento lista desplegable -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="pais">¿Donde van a caer los gatos terroristas?:</label>
+                <select id="pais" name="pais">
+                    <option value="sauces">Sauces</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="estadosUnidos">Estados Unidos</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="cataluña">Cataluña</option>
+                </select>
+            </div>
+            <div>
+                <img src="./images/gatoParacaidista.webp" alt="gato en un pajaro volador">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 12. Elemento de texto -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="sitio">¿A donde va el gato?:</label>
+                <input list="sitios" id="sitio" name="sitio" style="width: 300px;">
+                <datalist id="sitios">
+                    <option value="Ponferrada">
+                    <option value="Isrrael">
+                    <option value='Villapene (haz click en la imagen para más info)'>
+                </datalist>
+            </div>
+            <div>
+                <a href="https://prezi.com/p/na3ruy7ovoip/mi-fantastico-pueblo/"><img src="./images/gatoCaminando.gif" alt="gato de turista"></a>
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 13. Elemento textarea -->
+        <div class="flex centrarHorizontal">
+            <div class="flex centrarHorizontal">
+                <label for="comentarios">¿Porque te esta juzgando este gato?:</label>
+                <textarea id="comentarios" name="comentarios" rows="3" cols="50"></textarea>
+            </div>
+            <div>
+                <img src="./images/gatoSus.gif" alt="gato juzgandote con la mirada (te puede leer la mente)">
+            </div>
+        </div>
+        
+        <br><br>
+
+        <!-- 14. Input tipo imagen -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="imagen">Sube una imagen de ti haciendo esta pose:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+            </div>
+            <div>
+                <img src="./images/gatoTieso.jpg" alt="es un gato y esta tieso">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 15. Elemento hidden -->
+        <input type="hidden" name="el gato escondido" value="de locos, esta escondido">
+
+        <!-- 16. Elemento search -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <div>
+                    <label for="buscar">Busca un gato secreto con el que acabar la dictadura en Turkmenistán:</label>
+                    <input type="search" id="buscar" name="buscar">
+                </div><br>
+                <div>
+                    <label for="sitio-web">Sitio web para buscar el gato secreto:</label>
+                    <input type="url" id="sitio-web" name="sitio-web">
+                </div>
+            </div>
+            <div>
+                <img src="./images/gatoSecreto.gif" alt="">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 18. Elemento password -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="password">Codigo secreto de la alianza gatuna (Contraseña):</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <img src="./images/gatoÑikiñiki.gif" alt="gato bailando con tremendo flow bacano">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 19. Elemento number -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="cantidad">Cantidad de gatos que has secuestrado en la ultima semana:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+            </div>
+            <div>
+                <img src="./images/gatoHorrorizado.gif" alt="gato horrorizado por la terrible atrozidad que has hecho">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 20. Elemento file -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="archivo">Sube un archivo:</label>
+                <input type="file" id="archivo" name="archivo">
+            </div>
+            <div>
+                <img src="./images/gatoArchivo2.gif" alt="gato pendejo mira a camara en 4k">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 21. Elemento color -->
+        <div class="flex centrarHorizontal">
+            <div>
+                <label for="color">¿De que color es un gato alienigena?:</label>
+                <input type="color" id="color" name="color" value="#ff0000">
+            </div>
+            <div>
+                <img src="./images/gatoAlien.gif" alt="gato alienigena haciendo el baile de la conquiesta intergalactica">
+            </div>
+        </div>
+        <br><br>
+
+        <!-- 22. Elemento submit -->
+        <input type="submit" value="Enviar">
+
+        <!-- 23. Elemento reset -->
+        <input type="reset" value="Restablecer">
+
+    </form>
+
+    <!-- Pie de página -->
+
+    <br><br>
+    <footer>
+        <p>2024-25 IES Los Sauces.&#169; Todos los derechos reservados. <a href="../../">Jesus Temprano Gallego</a></p>
+        <a class="w3v" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdaw118.ieslossauces.es%2F118LMSGIProyectoLMSGI%2Funidad2%2F03">
+            <div></div>
+        </a>
+        <p>Fecha de actualización: <time datetime="2024-12-27">27 de diciembre de 2024</time></p>
+    </footer>
+
+</body>
+</html>

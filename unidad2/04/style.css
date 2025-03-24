@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0;}
+
+body{text-align: center; background-color: rgb(209, 119, 194);}
+
+body>header,
+body>footer{
+    background-color: brown;
+    padding: 10px;
+}
+body>header>h1,
+body>footer>div{
+    padding: 1em;
+    background-color: rgb(55, 128, 192);
+}
+body>footer>div>.w3v{margin: 10px auto;}
+header,footer{font-size: 1em;}
+
+main>section{margin-top: 18px; margin-bottom: 15px;}
+video,img{height: 225px;}
+
+
+h2,h3{margin-top: 10px; margin-bottom: 4px;}

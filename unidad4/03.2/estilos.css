@@ -1,0 +1,18 @@
+description, example {
+    display: block;
+    margin-bottom: 10px;
+}
+
+example {
+    white-space: pre; /* Preserva la indentación del código */
+    font-family: monospace; /* Usa una fuente adecuada para código */
+    background-color: #f9f9f9; /* Fondo claro para resaltar */
+    border: 1px solid #ddd; /* Borde para el bloque de código */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+example::after {
+    content: ' \A'; /* Asegura una nueva línea después del bloque */
+    white-space: pre;
+}

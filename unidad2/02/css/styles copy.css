@@ -1,0 +1,48 @@
+table {border-collapse: collapse; text-align: center;}
+td,th {border: 2px solid black; padding: 0px 3.5px;}
+/* *{text-align: center;} */
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1024px;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+ul,li{
+    display: inline;
+    text-align: center;
+}
+li{
+    padding: 10px;
+    margin: 0px;
+    background-color: aquamarine;
+
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+table{
+    width: 90%;
+    margin: 0 auto;
+}
+tr{
+    height: 2em;
+}
+
+article{
+    background-color: rgba(211, 211, 211, 0.2);
+    margin-top: 30px;
+}
+.menu{
+    position: sticky;
+    top: 0;
+}

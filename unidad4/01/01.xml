@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mail [
+    <!ELEMENT mail (remitente, destinatarios, fecha, asunto, mensaje, ficheros_adjuntos)>
+    <!ELEMENT remitente (#PCDATA)>
+    <!ELEMENT destinatarios (destinatario+)>
+    <!ELEMENT destinatario (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, anio)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT mensaje (#PCDATA|h2|p|strong|ul|li)*>
+    <!ELEMENT h2 (#PCDATA)>
+    <!ELEMENT p (#PCDATA|strong|ul|li)*>
+    <!ELEMENT strong (#PCDATA)>
+    <!ELEMENT ul (li+)>
+    <!ELEMENT li (#PCDATA)>
+    <!ELEMENT ficheros_adjuntos (fichero*)>
+    <!ELEMENT fichero (nombre, tipo_mime)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo_mime (#PCDATA)>
+]>
+
+<mail>
+  <remitente>remitente@ejemplo.com</remitente>
+  
+  <destinatarios>
+    <destinatario>destinatario1@ejemplo.com</destinatario>
+    <destinatario>destinatario2@ejemplo.com</destinatario>
+  </destinatarios>
+  
+  <fecha>
+    <dia>3</dia>
+    <mes>9</mes>
+    <anio>2018</anio>
+  </fecha>
+  
+  <asunto>Asunto del mensaje</asunto>
+  
+  <mensaje>
+    <h2>Título del mensaje</h2>
+    <p>Cuerpo del mensaje<strong>con texto en negrita</strong> y otras etiquetas html como una lista:</p>
+    <ul>
+      <li>como</li>
+      <li>esta</li>
+    </ul>
+  </mensaje>
+  
+  <ficheros_adjuntos>
+    <fichero>
+      <nombre>documento.pdf</nombre>
+      <tipo_mime>application/pdf</tipo_mime>
+    </fichero>
+    <fichero>
+      <nombre>imagen.jpg</nombre>
+      <tipo_mime>image/jpeg</tipo_mime>
+    </fichero>
+  </ficheros_adjuntos>
+</mail>

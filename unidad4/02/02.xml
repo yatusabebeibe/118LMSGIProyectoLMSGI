@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "02.dtd">
+
+
+<biblioteca>
+    <libro idLibro="libro1" genero="novela" >
+        <titulo>BRRRR</titulo>
+        <autores>
+            <autor>
+                <nombre>Yoni</nombre>
+                <apellido>el lovo</apellido>
+                <nacionalidad>Republica Dominicana</nacionalidad>
+            </autor>
+        </autores>
+        <año>2024 beibe</año>
+    </libro>
+    <libro idLibro="libro2" genero="novela">
+        <titulo>RRAAAAA</titulo>
+        <autores>
+            <autor>
+                <nombre>Kebin</nombre>
+                <apellido>el roneante</apellido>
+                <nacionalidad>Indocumentao</nacionalidad>
+            </autor>
+        </autores>
+        <año>2024 beibe</año>
+    </libro>
+</biblioteca>
