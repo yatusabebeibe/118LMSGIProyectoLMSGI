@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 1 DOM</title>
+    <!-- defer indica que se ejecuta cuando el DOM esta-->
+    <script src="js/script.js" defer></script>
+    <script src="js/script1.js"></script>
+    <style>
+      body {margin: 0;}
+      footer {
+        padding: 10px;
+        background-color: #333333;
+      }
+      footer > *{
+        margin: 7.5px;
+        color: white;
+      }
+      footer > button{
+        background-color: hsl(204, 70%, 53%);
+        border: 2px solid hsl(204, 70%, 43%);
+        border-radius: 5px;
+        padding: 7px 15px;
+        transition: 500ms;
+      }
+      footer > button:hover {
+        background-color: hsl(204, 70%, 43%);
+        border-color: hsl(204, 70%, 33%);
+        transition: 500ms;
+        cursor: pointer;
+      }
+      footer a {
+        color: greenyellow;
+        padding: 0 2px;
+      }
+      footer a:hover {
+        color: hsl(84, 100%, 35%);
+        background-color: hsl(0, 0%, 17%);
+        border-radius: 3.5px;
+      }
+
+    </style>
+  </head>
+  <body id="cuerpo">
+    <h1 id="titulo">Cambiar </h1>
+    <p class="parrafo">Este es un párrafo  1 .</p>
+    <p class="parrafo">Este es un párrafo  2 .</p>
+    <p class="parrafo">Este es un párrafo  3 .</p>
+
+    <footer>
+      <button id="boton1">Saludar</button>
+      <button id="boton2">Fondo Oscuro</button>
+      <button id="boton3">Cambiar Parrafos</button>
+      <p>Todos los derechos reservados <a href="../../">Jesus Temprano Gallego</a></p>
+  </footer>
+  </body>
+</html>
