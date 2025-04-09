@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+  }
+   
+  h1 {
+    color: #000;
+    font-size: 28px;
+  }
+   
+  label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+   
+  input[type="number"] {
+    width: 60px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #4f9ed3;
+    color: white;
+    border-radius: 8px;
+    margin-right: 10px;
+    text-align: center;
+  }
+   
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+   
+  input[type="button"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #a8d5f2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+   
+  input[type="button"]:hover {
+    background-color: #a8d5ff;
+  }
+   
+  table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid #4da6ff;
+  }
+   
+  td {
+    border: 1px solid #4da6ff;
+    padding: 10px 15px;
+    text-align: center;
+}

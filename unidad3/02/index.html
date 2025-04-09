@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ejemplo 8 DOM</title>
+      <link rel="stylesheet" href="css/estilos.css" />
+    </head>
+  <body>
+    <h1>Ejemplo 8 DOM: Crear tabla</h1>
+    <label for="filas">Número de filas:</label>
+    <input type="number" id="filas" min="1" max="10" value="2">  
+    <label for="numerocolumnas">Número de columnas:</label>
+    <input type="number" id="numerocolumnas"  min="1" max="10" value="2">
+    <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+  </body>
+  <script>
+    function genera_tabla() {
+      var body = document.getElementsByTagName("body")[0];
+      var filas = document.getElementById("filas").value;
+      var columnas = document.getElementById("numerocolumnas").value;
+      console.log(filas+" "+columnas);
+      // Limpiar contenido body
+
+      body.innerHTML = '<h1>Ejemplo 8 DOM: Crear tabla</h1>\n<label for="filas">Número de filas:</label>\n<input type="number" id="filas" min="1" max="10" value="2">\n<label for="numerocolumnas">Número de columnas:</label>\n<input type="number" id="numerocolumnas"  min="1" max="10" value="2">\n<input type="button" value="Genera una tabla" onclick="genera_tabla()" />'
+
+      var tabla = document.createElement("table");
+      var tbody = document.createElement("tbody");
+
+      for (let f = 0; f < filas; f++) {
+        var tr = document.createElement("tr");
+        for (let c = 0; c < columnas; c++) {
+          var td = document.createElement("td");
+          var textoCelda = document.createTextNode("Fila: "+f+", Columna: "+c);
+          td.appendChild(textoCelda);
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      }
+      tabla.appendChild(tbody);
+      body.appendChild(tabla);
+      tabla.setAttribute("border", "2");
+      console.log("aaaaaa");
+    }
+
+  </script>
+  </html>
