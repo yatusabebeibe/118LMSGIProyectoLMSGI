@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 8 DOM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <script src="js/script.js" defer></script> -->
+    <style>
+        .tablero {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 640px;
+            margin: auto;
+        }
+    
+        .casilla {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1> Juego de Tablero con Imágenes</h1>
+    <div class="tablero" id="tablero">
+        <!-- Las casillas se llenarán con JS -->
+    </div>
+    <footer>
+        <div>
+            <p>Todos los derechos reservados <a href="../../">Jesus Temprano Gallego</a></p>
+        </div>
+    </footer>
+    <script>
+        const imagenes = [
+            'https://picsum.photos/200?random=1',
+            'https://picsum.photos/200?random=2',
+            'https://picsum.photos/200?random=3',
+            'https://picsum.photos/200?random=4',
+            'https://picsum.photos/200?random=5',
+            'https://picsum.photos/200?random=6',
+            'https://picsum.photos/200?random=7',
+            'https://picsum.photos/200?random=8'
+        ];
+
+        // Referencia al tablero
+        const tablero = document.getElementById('tablero');
+
+        // Creamos las casillas del tablero
+        for (let i = 0; i < 6; i++) {
+            const casilla = document.createElement('div');
+            casilla.classList.add('casilla');
+            casilla.addEventListener('click', () => {
+                // Generamos un índice aleatorio para seleccionar una imagen
+                const indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+                casilla.innerHTML = `<img src="${imagenes[indiceAleatorio]}" alt="Imagen aleatoria">`;
+            });
+            tablero.appendChild(casilla);
+        }
+
+    </script>
+</body>
+
+</html>
