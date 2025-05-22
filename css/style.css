@@ -22,10 +22,10 @@
     src: url(../../webroot/fonts//MarlinSoftSQ-ExtraBold.woff2);
 }
 @font-face {
-    font-family: "Marlin Soft SQ M";
+    font-family: "Marlin Soft SQ M",'Roboto', Arial, sans-serif;
     src: url(../../webroot/fonts//MarlinSoftSQ-Medium.woff2);
 }
-body{background-color: var(--fondo); color: var(--texto); font-family: "Marlin Soft SQ M"; margin: 0; padding: 0; max-width: 1920px; margin: 0 auto;}
+body{background-color: var(--fondo); color: var(--texto); font-family: "Marlin Soft SQ M",'Roboto', Arial, sans-serif; margin: 0; padding: 0; max-width: 1920px; margin: 0 auto;}
 h1,h2,h3,h4,p{font-size: 1em; margin: 0;}
 a,main>section>div>div{text-decoration: none; color: var(--textoLinks);}
 header img{width: 100px;}
@@ -33,7 +33,7 @@ header img{width: 100px;}
 header>div {display: flex; align-items: center; gap: 15px;}
 header,footer{background-color: var(--fondo2); width: 100%; display: flex; padding: 15px; box-sizing: border-box; align-items: center;}
 header{justify-content: space-between; margin-bottom: 25px;}
-header h1{font-family: "Marlin Soft SQ EB"; font-size: 1.75em; font-weight: bolder;}
+header h1{font-family: "Marlin Soft SQ EB",'Roboto', Arial, sans-serif; font-size: 1.75em; font-weight: bolder;}
 
 footer>div{display: flex; gap: 15px;}
 footer{flex-direction: column; gap: 10px; margin-top: 25px;}
@@ -44,7 +44,7 @@ main{width: 95%;
     margin: 0 auto;
 
 }
-main>section {background-color: var(--contenedor); display: flex; margin: 50px; flex-direction: column; align-items: center}
+main>section {background-color: var(--contenedor); display: flex; margin: 50px; flex-direction: column; align-items: center; padding: 0 15px; border-radius: 24px;}
 main>section>h2 {font-size: 1.5em; padding-top: 20px; text-align: center;}
 main>section>div{
     display: flex;
