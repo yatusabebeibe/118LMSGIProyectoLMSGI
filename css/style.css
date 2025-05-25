@@ -19,11 +19,11 @@
 }
 @font-face {
     font-family: "Marlin Soft SQ EB";
-    src: url(../../webroot/fonts//MarlinSoftSQ-ExtraBold.woff2);
+    src: url(../../webroot/fonts/MarlinSoftSQ-ExtraBold.woff2);
 }
 @font-face {
-    font-family: "Marlin Soft SQ M",'Roboto', Arial, sans-serif;
-    src: url(../../webroot/fonts//MarlinSoftSQ-Medium.woff2);
+    font-family: "Marlin Soft SQ M";
+    src: url(../../webroot/fonts/MarlinSoftSQ-Medium.woff2);
 }
 body{background-color: var(--fondo); color: var(--texto); font-family: "Marlin Soft SQ M",'Roboto', Arial, sans-serif; margin: 0; padding: 0; max-width: 1920px; margin: 0 auto;}
 h1,h2,h3,h4,p{font-size: 1em; margin: 0;}
