@@ -5,7 +5,7 @@
     Created on : 15 de abril de 2020, 11:14
     Author     : amor
     Description:
-       Manejar mútiples patrones o plantillas para obtener una pagina web
+        Manejar mútiples patrones o plantillas para obtener una pagina web
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -27,7 +27,6 @@
     <xsl:template match="alumno">
         <p><xsl:value-of select="concat(nombre,' ',apellido)"/></p>
         <xsl:apply-templates select="direccion"/>
-           <hr/>
     </xsl:template>
     
     <!-- Mostrar las direcciones de cada alumno -->

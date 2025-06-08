@@ -1,0 +1,47 @@
+<!ELEMENT inventario (objeto+)> 
+<!--<!ELEMENT> define un elemento y su contenido.
+    Puede contener otros elementos, texto (#PCDATA) o una combinación.
+-->
+<!-- (objeto+) significa que debe haber al menos un elemento <objeto> (uno o más) -->
+
+    <!ELEMENT objeto (mesa|ordenador)> <!ATTLIST objeto codigo ID #REQUIRED>
+    <!-- (mesa|ordenador) indica que el contenido de <objeto> puede ser <mesa> o <ordenador>, pero no ambos -->
+    <!--<!ATTLIST> define atributos para un elemento.
+        El atributo "codigo" es de tipo ID (único en todo el documento) y es obligatorio (#REQUIRED) 
+    -->
+
+        <!ELEMENT mesa (tipo, localizacion)>
+        <!-- (tipo, localizacion) indica que <mesa> debe contener ambos elementos en ese orden -->
+
+            <!ELEMENT tipo (#PCDATA)>
+            <!-- #PCDATA significa texto plano (Parsed Character Data) -->
+
+            <!ELEMENT localizacion (#PCDATA)>
+            <!-- 
+                - (#PCDATA)  → Texto plano (Parsed Character Data), es decir, contenido textual sin etiquetas hijas.
+                - (A, B)     → Secuencia: el elemento debe contener A seguido de B.
+                - (A | B)    → Alternativa: el elemento puede contener A o B (uno de los dos).
+                - (A*)       → Cero o más repeticiones del elemento A.
+                - (A+)       → Una o más repeticiones del elemento A.
+                - (A?, B*)   → Combinaciones opcionales y repetidas.
+                - EMPTY      → El elemento no puede tener contenido (ni texto ni elementos hijos).
+                - ANY        → El elemento puede contener cualquier cosa (texto o elementos), poco recomendable.
+            -->
+
+        <!ELEMENT ordenador (procesador, memoria, discoduro)>
+        <!-- ordenador debe contener estos tres elementos en orden -->
+
+            <!ELEMENT procesador (#PCDATA)> <!ATTLIST procesador fabricante (Intel|AMD) "Intel">
+            <!--Atributo "fabricante" con valores restringidos a (Intel|AMD).
+                El valor por defecto es "Intel" si no se especifica (entre comillas dobles).
+            -->
+
+            <!ELEMENT memoria (#PCDATA)> <!ATTLIST memoria unidad CDATA #FIXED "Gb">
+            <!--Tipo CDATA significa cualquier cadena de texto.
+                #FIXED indica que el valor del atributo siempre será el mismo ("Gb") y no puede cambiarse
+            -->
+
+            <!ELEMENT discoduro (#PCDATA)> <!ATTLIST discoduro tamano (Tb|Gb|Mb) "Gb">
+            <!--Atributo "tamano" con valores restringidos a (Tb|Gb|Mb).
+                Valor por defecto: "Gb"
+            -->
