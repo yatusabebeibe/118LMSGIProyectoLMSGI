@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- xs:schema es la raíz de cualquier XSD. Define el espacio de nombres (namespace) y contiene todo el esquema -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- xs:element define un elemento XML. El atributo "name" indica su nombre en el XML -->
     <xs:element name="pedido">
+        <!-- xs:complexType indica que el elemento tiene otros elementos o atributos dentro -->
         <xs:complexType>
+            <!-- xs:sequence define que los elementos hijos deben aparecer en un orden específico -->
             <xs:sequence>
+                
+                <!-- xs:element puede tener "maxOccurs" (número máximo de repeticiones) y "minOccurs" (mínimo) -->
                 <xs:element name="tractor" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="componente" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
+                                        
+                                        <!-- minOccurs="0" hace que el elemento sea opcional -->
                                         <xs:element name="fechaEntrega" minOccurs="0">
                                             <xs:complexType>
+                                                <!-- xs:attribute define un atributo de un elemento -->
+                                                <!-- name es el nombre del atributo, type su tipo de dato -->
                                                 <xs:attribute name="mes" type="xs:int"/>
+                                                
+                                                <!-- Tipo xs:gYear representa un año (ej: 2025) -->
                                                 <xs:attribute name="anio" type="xs:gYear"/>
+                                                
+                                                <!-- use="optional" indica que este atributo no es obligatorio -->
                                                 <xs:attribute name="dia" type="xs:int" use="optional"/>
                                             </xs:complexType>
                                         </xs:element>
+                                        
                                         <xs:element name="fragil" minOccurs="0"/>
+                                        
                                         <xs:element name="peso">
                                             <xs:complexType>
+                                                <!-- xs:simpleContent se usa cuando un elemento tiene texto + atributos -->
                                                 <xs:simpleContent>
+                                                    <!-- xs:extension extiende un tipo base añadiendo atributos -->
                                                     <xs:extension base="xs:positiveInteger">
                                                         <xs:attribute name="unidad" >
+                                                            <!-- xs:simpleType permite definir un tipo nuevo personalizado -->
                                                             <xs:simpleType>
+                                                                <!-- xs:restriction restringe un tipo base con condiciones -->
                                                                 <xs:restriction base="xs:string">
-                                                                    <xs:pattern value="k?g"></xs:pattern>
+                                                                    <!-- xs:pattern define una expresión regular para validar -->
+                                                                    <xs:pattern value="k?g"/>
                                                                 </xs:restriction>
                                                             </xs:simpleType>
                                                         </xs:attribute>
@@ -32,37 +54,49 @@
                                                 </xs:simpleContent>
                                             </xs:complexType>
                                         </xs:element>
+                                        
+                                        <!-- type="xs:string" indica que el contenido debe ser texto -->
                                         <xs:element name="numeroSerie" type="xs:string"/>
+                                        
+                                        <!-- xs:positiveInteger: número entero mayor que 0 -->
                                         <xs:element name="kmMaximos" type="xs:positiveInteger" minOccurs="0"/>
+                                        
+                                        <!-- default="1" asigna un valor por defecto si no se indica en el XML -->
                                         <xs:element name="cantidad" type="xs:positiveInteger" default="1"/>
                                     </xs:sequence>
+                                    
                                     <xs:attribute name="referencia">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:ID">
-                                                <xs:pattern value="[A-Z]{3}[0-9]{7}"></xs:pattern>
+                                                <!-- xs:ID es un tipo especial de xs:string que debe ser único en el documento -->
+                                                <xs:pattern value="[A-Z]{3}[0-9]{7}"/>
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
+                        
                         <xs:attribute name="codigoFabricante">
                             <xs:simpleType>
                                 <xs:restriction base="xs:ID">
-                                    <xs:pattern value="F[0-9]{3}"></xs:pattern>
+                                    <xs:pattern value="F[0-9]{3}"/>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+            
             <xs:attribute name="idPedido">
                 <xs:simpleType>
                     <xs:restriction base="xs:ID">
-                        <xs:pattern value="P[0-9]{3}"></xs:pattern>
+                        <xs:pattern value="P[0-9]{3}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
+            
+            <!-- type="xs:date" indica una fecha con formato AAAA-MM-DD -->
             <xs:attribute name="fecha" type="xs:date"/>
         </xs:complexType>
     </xs:element>

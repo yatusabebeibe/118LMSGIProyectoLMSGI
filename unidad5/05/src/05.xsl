@@ -7,18 +7,25 @@
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/root" mode="#all">
             <xsl:copy>
+                <!--
+                    <xsl:copy>: copia el nodo actual (en este caso <root>) sin modificar su nombre ni atributos.
+                -->
                 <xsl:for-each select="row">
                     <xsl:copy>
-                        <!--<Anyo><xsl:value-of select="@Anyo"/></Anyo>
-                        -->
                         <xsl:for-each select="@*">
                             <xsl:element name="{name()}">
+                                <!--
+                                    <xsl:element>: crea un nuevo elemento cuyo nombre es el del atributo actual.
+                                    {name()} evalúa el nombre del atributo gracias a expand-text="yes".
+                                -->
                                 <xsl:value-of select="."/>
+                                <!--
+                                    <xsl:value-of>: obtiene el valor del atributo y lo inserta dentro del nuevo elemento.
+                                -->
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:copy>
                 </xsl:for-each>
-                <xsl:apply-templates/>
             </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>
