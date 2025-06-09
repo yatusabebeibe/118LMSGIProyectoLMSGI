@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://daw118.ieslossauces.es/feed/rss.xml" rel="self" type="application/rss+xml"/>
+        <title>DAW 118 - Jesús Temprano Gallego</title>
+        <link>https://daw118.ieslossauces.es/</link>
+        <description>Este es el RSS de Jesús Temprano Gallego</description>
+        <language>ES-ES</language>
+        <image>
+            <url>https://daw118.ieslossauces.es/logoTest.png</url>
+            <title>DAW 118 - Jesús Temprano Gallego</title>
+            <link>https://daw118.ieslossauces.es/</link>
+        </image>
+        <skipDays>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <skipHours>
+            <hour>0</hour>
+            <hour>1</hour>
+            <hour>2</hour>
+            <hour>3</hour>
+            <hour>4</hour>
+            <hour>5</hour>
+            <hour>6</hour>
+            <hour>7</hour>
+            <hour>8</hour>
+        </skipHours>
+        <item>
+            <title>Egenplo BRRRR</title>
+            <link>https://example-brrrrr.com/</link>
+            <description>pa lo ke nunca cleyeron ke podria yegal tan lejos, eto ia eh otro nibel, lo dema no yegan ni a la suela veibi!!!</description>
+            <author>autorbrrrrrrrrr@example.com (Prueva brrrr)</author>
+            <category>Frase pa to eso peldedore que no confian brrrrrrrrrrrrrr</category>
+            <pubDate>Mon, 25 Nov 2024 00:49:00 +0100</pubDate>
+            <guid>https://example-brrrrr.com/</guid>
+        </item>
+        <item>
+            <title>Se ha aumentado la privacidad de la pagina</title>
+            <link>https://daw118.ieslossauces.es/</link>
+            <description>Se ha realizado una actualización en la página principal para crear un espacio personal, garantizando la privacidad y evitando interferencias externas. 😏</description>
+            <author>jesus.temgal@educa.jcyl.es (Jesús Temprano Gallego)</author>
+            <pubDate>Thu, 12 Dec 2024 20:48:00 +0100</pubDate>
+            <guid>https://daw118.ieslossauces.es/</guid>
+        </item>
+        <item>
+            <title>Creación del índice de lenguajes de marcas</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/</link>
+            <description>
+                <![CDATA[
+                <p>Se ha creado el índice de lenguajes de marcas para poder acceder a los ejercicios.</p>
+                ]]>
+            </description>
+            <pubDate>Sun, 15 Dec 2024 14:47:00 +0100</pubDate>
+            <guid>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/</guid>
+        </item>
+        <item>
+            <title>Se han modificado mucahs cosas 🤓</title>
+            <link>https://daw118.ieslossauces.es/</link>
+            <description>
+                <![CDATA[
+                <p>He modificado muchas cosas que se tenian que modificar 🥴.</p>
+                ]]>
+            </description>
+            <pubDate>Wed, 26 Mar 2025 22:22:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Se han añadido los Ej 3, 3.1, 4 y 5 de la U3</title>
+            <link>https://daw118.ieslossauces.es/</link>
+            <description>
+                <![CDATA[
+                <p>Se han añadido los Ej 3, 3.1, 4 y 5 de la U3. :V UwU 💞</p>
+                ]]>
+            </description>
+            <pubDate>Mon, 31 Mar 2025 23:23:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Se ha añadido el ej 2 de la U3</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/unidad3/02</link>
+            <description>
+                <![CDATA[
+                <p>Se ha añadido el ej 2 de la U3. 😮</p>
+                ]]>
+            </description>
+            <pubDate>Wed, 09 Apr 2025 22:23:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Se ha publicado el ejercicio 3 de la UD3</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/unidad3/03</link>
+            <description>
+                <![CDATA[
+                <p>Ya está disponible el ejercicio 3 de la UD3.</p>
+                ]]>
+            </description>
+            <pubDate>Thu, 22 May 2025 14:21:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Se han publicado los ejercicios 1 a 3 de la UD6</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/</link>
+            <description>
+                <![CDATA[
+                <p>Ya están disponibles los ejercicios 1, 2 y 3 de la UD6. 🫩</p>
+                ]]>
+            </description>
+            <pubDate>Thu, 22 May 2025 14:45:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Se ha publicado el ejercicio 4 de la UD6</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/unidad6/04</link>
+            <description>
+                <![CDATA[
+                <p>Ya está disponible el ejercicio 4 de la UD6. 😜</p>
+                ]]>
+            </description>
+            <pubDate>Sun, 25 May 2025 17:28:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Examen 04. Horoscopo/Signos del zodiaco</title>
+            <link>https://daw118.ieslossauces.es/118LMSGIProyectoLMSGI/examen/Ex04/target</link>
+            <description>
+                <![CDATA[
+                <p>El examen del horoscopo 🤯</p>
+                ]]>
+            </description>
+            <pubDate>Mon, 09 Jun 2025 10:48:00 +0200</pubDate>
+        </item>
+    </channel>
+</rss>

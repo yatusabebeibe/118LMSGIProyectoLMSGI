@@ -1,0 +1,129 @@
+/* ----------   START GLOBAL   ---------- */
+@font-face {
+    font-family: Pangolin;
+    src: url(../fonts/Pangolin-Regular.ttf);
+}
+
+.rraaaaa{  padding: 0; margin: 0;  }
+
+h1,h2,h3,h4,p{font-size: 1em; margin: 0;}
+body {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+header>div>div img {width: 100px;}
+
+div { padding: 6px; width: fit-content; }
+
+.flex { display: flex; }
+.eXTreMo { justify-content: space-between; }
+.elSentraito{ align-items: center; text-align: center; margin: 0 auto;}
+
+/* -----------   END GLOBAL   ----------- */
+
+
+/* -----------   START HEAD   ----------- */
+header{width: 100%; user-select: none;}
+header>div{width: 100%; max-width: 1920px;}
+
+header>div.flex>div{
+    gap: 10px;
+    margin: 10px;
+}
+
+.iconsito>a { width: fit-content; text-decoration: none; }
+a.iconsito { text-decoration: none; }
+
+.iconsito {
+    background-color: #2222226d;
+    display: flex; /* Asegura alineación para el contenido */
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Ajusta según tus necesidades */
+    height: 35px; /* Ajusta según tus necesidades */
+    border-radius: 30%; /* Opcional: hace que el contenedor sea circular */
+    transition: .9s;
+}
+.iconsito i {
+    display: flex;
+    width: 100%; /* Coincide con el tamaño del contenedor */
+    height: 100%; /* Coincide con el tamaño del contenedor */
+    font-size: 33px; /* Tamaño del ícono; ajusta según sea necesario */
+}
+.iconsito i::before {
+    width: 100%; 
+    height: 100%; 
+}
+.iconsito:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+/* ------------   END HEAD   ------------ */
+
+
+/* -----------   START MAIN   ----------- */
+footer{display: flex; flex-direction: column; align-items: center; margin-top: auto; position: absolute; bottom: 0; width: 100%; padding: 15px 0; gap: 7px; max-width: 1920px;}
+
+main { width: 95%; margin: 25px auto 0 auto; padding-top: 1px; border-radius: 24px;}
+main>div:nth-child(1) { font-size: 2.3em; padding: 3px; margin: 20px auto 25px auto;}
+
+main>section {width: 90%;margin-top: 17px !important; align-items: center; text-align: center; margin: 0 auto;}
+
+section>h3 {font-size: 1.35em; padding: 3px;}
+
+h3+div>a>img {display: none;}
+
+body>footer>div>div:nth-child(5)>a>i.fa-solid.fa-w.fa-2xs {translate: -2px -2px;}
+body>footer>div>div:nth-child(5)>a>i.fa-solid.fa-3.fa-2xs {translate: 7px 2px;}
+
+
+main>section>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 95%;
+    padding: 16px 0px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+main>section>div>a{
+    flex-basis: calc(100%/5 - 21px);
+}
+main>section>div img {
+    width: 100%;
+}
+@media (max-width: 1380px) {
+    main>section>div>a{
+        flex-basis: calc(100%/5 - 21px);
+    }
+}
+@media (max-width: 1200px) {
+    main>section>div>a{
+        flex-basis: calc(100%/4 - 21px);
+    }
+}
+@media (max-width: 1000px) {
+    main>section>div>a{
+        flex-basis: calc(100%/3 - 21px);
+    }
+}
+@media (max-width: 700px) {
+    main>section>div>a{
+        flex-basis: calc(100%/2 - 21px);
+    }
+}
+
+@media (max-width: 376px) {
+    header>div {
+        flex-wrap: wrap
+    }
+    header>div>div:nth-child(1) {
+        padding: 10px 29px;
+    }
+}

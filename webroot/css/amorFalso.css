@@ -1,0 +1,95 @@
+body:has(div>#amorFalso:checked)::-webkit-scrollbar         { background-color: red; }
+body:has(div>#amorFalso:checked)::-webkit-scrollbar-track   { background-color: red; }
+body:has(div>#amorFalso:checked)::-webkit-scrollbar-thumb   { background-color: green; }
+
+body:has(div>#amorFalso:checked) {
+    background: url(../media/backgroundGato.gif) yellowgreen;
+    font-family: Pangolin;
+    font-weight: 700;
+    color: #222222;
+}
+body:has(div>#amorFalso:checked) * {cursor: url(../media/cursor.cur), auto;}
+body:has(div>#amorFalso:checked) a>* {cursor: url(../media/cursorLink.cur), auto;}
+body:has(div>#amorFalso:checked) h3+div>a>img {display: inline;}
+
+:root {
+    --bverde: green;
+    --brojo: red;
+    --bama: yellow;
+    --bazul: blue;
+    --bnara: orange;
+    --bmora: blueviolet;
+    --bblanco: linen;
+
+    --tverde: green;
+    --trojo: red;
+    --tama: yellow;
+    --tazul: blue;
+    --tnara: orange;
+    --tmora: #551a8b;
+    --tblanco: linen;
+}
+
+/* body:has(div>#amorFalso:checked) .bverde     { background-color: green; }
+body:has(div>#amorFalso:checked) .brojo      { background-color: red; }
+body:has(div>#amorFalso:checked) .bama       { background-color: yellow; }
+body:has(div>#amorFalso:checked) .bazul      { background-color: blue; }
+body:has(div>#amorFalso:checked) .bnara      { background-color: orange; }
+body:has(div>#amorFalso:checked) .bmora      { background-color: blueviolet; }
+body:has(div>#amorFalso:checked) .bblanco    { background-color: linen; }
+
+body:has(div>#amorFalso:checked) .tverde     { color: green; }
+body:has(div>#amorFalso:checked) .trojo      { color: red; }
+body:has(div>#amorFalso:checked) .tama       { color: yellow; }
+body:has(div>#amorFalso:checked) .tazul      { color: blue; }
+body:has(div>#amorFalso:checked) .tnara      { color: orange; }
+body:has(div>#amorFalso:checked) .tmora      { color: #551a8b; }
+body:has(div>#amorFalso:checked) .tblanco    { color: linen; } */
+
+
+body:has(div>#amorFalso:checked) header>div.flex{
+    background: linear-gradient(
+        169deg,
+        rgba(162, 110, 160, 1) 0%,
+        rgba(170, 123, 98, 1) 26%,
+        rgba(175, 90, 148, 1) 45%,
+        rgba(96, 131, 165, 1) 70%,
+        rgba(1, 255, 169, 1) 100%
+    );
+    z-index: 9999;
+}
+
+
+
+body:has(div>#amorFalso:checked) #textoAsignaturas::before {
+    content: "lasasignatura";
+}
+body:has(div>#amorFalso:checked) #tituloLMSGI::before {
+    content: "la de amol ia tu sabe brrrr";
+}
+/* 
+body:has(div>#amorFalso:checked) #::before {
+    content: "";
+}
+*/
+
+body:has(div>#amorFalso:checked) #miNombre::before {
+    content: "el yisus beibe";
+}
+
+body:has(div>#amorFalso:checked) main>div:has(>h2){background-color: var(--bblanco); color:var(--trojo);}
+body:has(div>#amorFalso:checked) header>div>div:nth-child(1){background-color: var(--bverde); color:var(--tazul);}
+body:has(div>#amorFalso:checked) header>div>div>div:has(>img) {display: none;}
+
+body:has(div>#amorFalso:checked) main>section>h3 {color: var(--tama);}
+body:has(div>#amorFalso:checked) main>section {background-color: var(--bmora);}
+
+
+
+
+body:has(div>#amorFalso:checked) .bueno{display: none;}
+
+
+
+
+
