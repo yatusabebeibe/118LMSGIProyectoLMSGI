@@ -1,0 +1,128 @@
+:root {
+    --altoFiltro:175px;
+    --anchoFiltro:350px;
+
+
+    --ruido:url(https://arc.net//noise-light.png);
+
+    --fondo:#11140f;
+    --fondo2:#1c2219;
+    --contenedor:#1d211b;
+    --textoTitulos:#a7d293;
+    --botones:#3d4b36;
+    --botonBorde:#373a33;
+    --texto:#e1e4da;
+    --header:#1c221a;
+
+    --bacgoundLinks:#224e4f;
+    --textoLinks:#bcebed;
+
+
+    /* #1c221a */
+}
+/* :root {
+    --altoFiltro:175px;
+    --anchoFiltro:350px;
+
+
+    --ruido:url(https://arc.net//noise-light.png);
+
+    --fondo:#0f1416;
+    --fondo2:#1c2219;
+    --contenedor:#1d211b;
+    --textoTitulos:#a7d293;
+    --botones:#3d4b36;
+    --botonBorde:#373a33;
+    --texto:#e1e4da;
+    --header:#1c221a;
+
+    --bacgoundLinks:#224e4f;
+    --textoLinks:#bcebed;
+
+
+    /* #1c221a 
+} */
+
+
+@font-face {
+    font-family: "Marlin Soft SQ EB";
+    src: url(../fonts//MarlinSoftSQ-ExtraBold.woff2);
+}
+@font-face {
+    font-family: "Marlin Soft SQ M";
+    src: url(../fonts//MarlinSoftSQ-Medium.woff2);
+}
+
+body:has(div>#amorTrue:checked) body{display: inline;}
+
+body:has(div>#amorTrue:checked) {
+    background: var(--fondo);
+    font-family: "Marlin Soft SQ M";
+    font-weight: 700;
+    color:var(--texto);
+}
+
+body:has(div>#amorTrue:checked) main>section.elSentraito {display: none;}
+body:has(div>#amorTrue:checked) header{background-color: var(--header); letter-spacing: 0.05em; overflow: hidden;}
+body:has(div>#amorTrue:checked) header>div>div>h1 {display: none;}
+body:has(div>#amorTrue:checked) header>div>div:nth-child(1)>div {display: flex; align-items: center; gap: 15px; padding: 0;}
+body:has(div>#amorTrue:checked) header>div>div:has(>div.iconsito:last-child) {display: none;}
+/* padding: 0 5%;  */
+body:has(div>#amorTrue:checked) a {color: var(--textoLinks); text-decoration: none; width:max-content;}
+body:has(div>#amorTrue:checked) a:hover {}
+body:has(div>#amorTrue:checked) main>section>div>a:has(>span){background-color: var(--botones); padding: 6px;border-radius: 12px;transition: background-color 1s;}
+body:has(div>#amorTrue:checked) main>section>div>a:has(>span):hover {background-color: var(--bacgoundLinks);}
+body:has(div>#amorTrue:checked) main>section>div>a>img {display: none;}
+
+body:has(div>#amorTrue:checked) #textoAsignaturas::before {
+    content: "Asignaturas";
+    color: var(--textoTitulos);
+}
+body:has(div>#amorTrue:checked) #tituloLMSGI::before {
+    content: "Lenguages de Marcas";
+    color: var(--textoTitulos);
+}
+body:has(div>#amorTrue:checked) #miNombre::before {
+    content: "Jesús Temprano Gallego";
+}
+/* body:has(div>#amorTrue:checked) main>div{ma} */
+
+
+body:has(div>#amorTrue:checked) main {
+    background-color: var(--contenedor);
+}
+body:has(div>#amorTrue:checked) {min-height: 100vh;}
+body:has(div>#amorTrue:checked) footer{background-color: var(--header); display: flex; flex-direction: column; align-items: center; margin-top: auto; position: absolute; bottom: 0; width: 100%; padding: 15px 0; gap: 7px; text-align: center;}
+
+body:has(div>#amorTrue:checked) .malo{display: none;}
+
+/* body > main > section.elSentraito.bmora > div > a:nth-child(1) > span */
+/* body:has(div>#amorTrue:checked) main>section:nth-child(1)>div::before  {content: "test";}
+main>section:nth-child(1)::before {content: "jdwhegbfhgfdhgf";}
+
+body:has(div>#amorTrue:checked) main>section:nth-child(2)>div>a:nth-child(1)>span::before  {content: "test";}
+body:has(div>#amorTrue:checked) main>section:nth-child(2)>div>a:nth-child(2)>span::before  {content: "test";} */
+/* 
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(3)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(4)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(5)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(6)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(7)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(8)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(9)  {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(10) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(11) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(12) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(13) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(14) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(15) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(16) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(17) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(18) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(19) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(20) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(21) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(22) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(23) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(24) {}
+body:has(div>#amorTrue:checked) main>section:nth-child(1)>div>a>span:nth-child(25) {} */

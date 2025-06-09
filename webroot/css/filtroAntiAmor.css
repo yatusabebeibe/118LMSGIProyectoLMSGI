@@ -1,0 +1,130 @@
+:root {
+    --altoFiltro:175px;
+    --anchoFiltro:350px;
+
+
+    --ruido:url(https://arc.net//noise-light.png);
+
+    --fondo:#11140f;
+    --fondo2:#1c2219;
+    --contenedor:#1d211b;
+    --textoTitulos:#a7d293;
+    --botones:#3d4b36;
+    --botonBorde:#373a33;
+    --texto:#e1e4da;
+
+
+    /* #1c221a */
+}
+body {overflow: hidden;}
+body:has(div>:checked) {overflow: visible;}
+body:has(div>:checked)>.filtroAntiAmor {display: none;}
+body:has(div>:checked)>#blancoBeibe {display: none;}
+
+@font-face {
+    font-family: "Marlin Soft SQ EB";
+    src: url(../fonts//MarlinSoftSQ-ExtraBold.woff2);
+}
+@font-face {
+    font-family: "Marlin Soft SQ M";
+    src: url(../fonts//MarlinSoftSQ-Medium.woff2);
+}
+
+.filtroAntiAmor {
+    height:fit-content;
+    width: var(--anchoFiltro);
+    user-select: none;
+    align-content: center;
+    text-align: center;
+    font-family: "Marlin Soft SQ EB";
+    letter-spacing: -0.05em;
+    font-weight: 800 ;
+
+    --anchoBoton: 10px;
+    background-color: var(--contenedor);
+    border-radius: 7px;
+    color: var(--textoTitulos);
+
+    padding: 35px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%) scale(1.75);
+    z-index: 10;
+}
+.filtroAntiAmor>.mini{font-size: 8px; font-weight: 100; font-family: "Marlin Soft SQ M"; letter-spacing: 0; filter: blur(4.5px); transition: .5s;}
+.filtroAntiAmor>.mini:hover{filter: none;}
+#blancoBeibe {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+    /* background-image: var(--ruido); */
+    z-index: 4;
+    position: absolute;
+    /* position: sticky; */
+    transform: translate(-50%, -50%) scale(2);
+    width: 200%;
+    height: 200%;
+    z-index: 1;
+}
+
+.filtroAntiAmor>span {
+    font-size: 31px;
+    white-space: normal; /* Permitir salto de línea */
+    display: block;      /* Ocupa todo el ancho */
+    margin-bottom: 10px; /* Espaciado con los demás elementos */
+    word-wrap: break-word; /* Romper palabras largas si es necesario */
+}
+
+.filtroAntiAmor>.contenedorBotones {
+    padding: 0; margin: 0;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.filtroAntiAmor input { display: none; }
+
+.filtroAntiAmor>.contenedorBotones>div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.filtroAntiAmor .boton {
+    background-color: var(--botones);
+    border: 2px solid var(--botonBorde);
+    padding: 9px 0;
+    border-radius: 200px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+}
+/* .filtroAntiAmor>:checked ~ div .boton {
+    background-color: var(--botonBorde);
+    border: 2px solid var(--botones);
+} */
+
+
+label.boton:hover {background-color: var(--botonBorde);}
+
+#amorTrue:checked ~ .contenedorBotones>div .boton {
+    background-color: #28a745;
+    border-color: #1e7e34;
+    transform: scale(0.95);
+}
+#amorTrue:checked ~ .contenedorBotones>.botonAmorFalso { display: none; }
+
+#amorFalso:checked ~ .contenedorBotones>div .boton {
+    background-color: #28a745;
+    border-color: #1e7e34;
+    transform: scale(0.95);
+}
+#amorFalso:checked ~ .contenedorBotones>.botonAmorTrue { display: none;}
+/* div.filtroAntiAmor:has(#amorFalso:checked ~ .contenedorBotones>.botonAmorFalso)::before { content: ""; } */
+#amorFalso:checked ~ .contenedorBotones::before { content: ""; }
+
+.filtroAntiAmor .boton{transition: .3s}
